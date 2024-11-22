@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Bike Variant - Man & Metal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #222;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('images/banner.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .intro {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .intro h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .intro p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+        .bike-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .bike-card {
+            background: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .bike-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+        }
+        .bike-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .bike-card h3 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+        .bike-card p {
+            font-size: 0.9rem;
+            padding: 0 15px 15px;
+            color: #ddd;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Man & Metal</h1>
+        <p>Select Your Bike Variant</p>
+    </header>
+    <div class="container">
+        <div class="intro">
+            <h2>Choose Your Style</h2>
+            <p>Select your preferred bike color variant and proceed to book your ride.</p>
+        </div>
+        <div class="bike-grid">
+            <!-- Red Variant -->
+            <div class="bike-card" onclick="selectVariant('Red')">
+                <img src="red-bike.jpg" alt="Red Bike">
+                <h3>Red Variant</h3>
+                <p>Bold and energetic, perfect for making a statement.</p>
+            </div>
+            <!-- Blue Variant -->
+            <div class="bike-card" onclick="selectVariant('Blue')">
+                <img src="blue-bike.jpg" alt="Blue Bike">
+                <h3>Blue Variant</h3>
+                <p>Calm yet striking, ideal for a unique presence on the road.</p>
+            </div>
+            <!-- Black Variant -->
+            <div class="bike-card" onclick="selectVariant('Black')">
+                <img src="black-bike.jpg" alt="Black Bike">
+                <h3>Black Variant</h3>
+                <p>Classic and timeless, a perfect blend of elegance and power.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Man & Metal. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+    <script>
+        function selectVariant(color) {
+            window.location.href = `booking.html?color=${encodeURIComponent(color)}`;
+        }
+    </script>
+</body>
+</html>

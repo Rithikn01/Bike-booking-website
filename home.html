@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Man & Metal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #222;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('images/banner.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .intro {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .intro h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .intro p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+        .bike-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .bike-card {
+            background: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .bike-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+        }
+        .bike-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .bike-card h3 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+        .bike-card p {
+            font-size: 0.9rem;
+            padding: 0 15px 15px;
+            color: #ddd;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MAN & METAL</h1>
+        <h2>Authorized Royal Enfield Dealer</h2>
+        
+    </header>
+    <div class="container">
+        <div class="intro">
+            
+        </div>
+        <div class="bike-grid">
+            <!-- Classic 350 -->
+            <div class="bike-card" onclick="location.href='classic.html'">
+                <img src="https://www.royalenfield.com/content/dam/royal-enfield/motorcycles/new-classic-350/classic-350-motorcycle-listing.jpg" alt="Classic 350">
+                <h3>Classic 350</h3>
+                <p>A perfect combination of vintage aesthetics and modern performance.</p>
+            </div>
+            <!-- Bullet 350 -->
+            <div class="bike-card" onclick="location.href='bullet.html'">
+                <img src="https://www.royalenfield.com/content/dam/royal-enfield/bullet/bullet-350-motorcycle-listing.jpg" alt="Bullet 350">
+                <h3>Bullet 350</h3>
+                <p>Experience the legendary ride of a true icon.</p>
+            </div>
+            <!-- Continental GT 650 -->
+            <div class="bike-card" onclick="location.href='gt.html'">
+                <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/landing/continental-gt-650-thumbnail.jpg" alt="Continental GT 650">
+                <h3>Continental GT 650</h3>
+                <p>Café racer styling with top-notch engineering and performance.</p>
+            </div>
+            <!-- Interceptor 650 -->
+            <div class="bike-card" onclick="location.href='interceptor.html'">
+                <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/landing/interceptor-650-thumbnail.jpg" alt="Interceptor 650">
+                <h3>Interceptor 650</h3>
+                <p>A versatile ride that excels on both city streets and open roads.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Man & Metal. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

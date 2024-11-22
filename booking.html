@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #222;
+            color: #fff;
+        }
+        header {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url('images/banner.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        form label {
+            display: block;
+            margin: 15px 0 5px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        form input, form select, form button {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+        form input, form select {
+            background: #444;
+            color: #fff;
+        }
+        form button {
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bike Service Booking</h1>
+        <p>Fill out the form to confirm your booking for bike services.</p>
+    </header>
+    <div class="container">
+        <h2>Service Booking Form</h2>
+        <form id="bookingForm" method="POST" action="save_booking.php">
+            <label for="owner_name">Name:</label>
+            <input type="text" id="owner_name" name="owner_name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="district">District:</label>
+            <input type="text" id="district" name="district" placeholder="Enter your district" required>
+
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+                <option value="" disabled selected>Select State</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Telangana">Telangana</option>
+                <!-- Add other states as needed -->
+            </select>
+
+            <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode" name="pincode" placeholder="Enter your pincode" required>
+
+            <label for="model">Model:</label>
+            <select id="model" name="model" required>
+                <option value="" disabled selected>Select Model</option>
+                <option value="Classic 350">Classic 350</option>
+                <option value="Bullet 350">Bullet 350</option>
+                <option value="Continental GT 650">Continental GT 650</option>
+                <option value="Interceptor 650">Interceptor 650</option>
+            </select>
+
+            <label for="variant">Variant:</label>
+            <select id="variant" name="variant" required>
+                <option value="" disabled selected>Select Variant</option>
+                <option value="Base">Base</option>
+                <option value="Mid">Mid</option>
+                <option value="Top">Top</option>
+            </select>
+
+            <label for="color">Color:</label>
+            <select id="color" name="color" required>
+                <option value="" disabled selected>Select Color</option>
+                <option value="Redditch Grey">Redditch Grey</option>
+                <option value="Jodhpur Blue">Jodhpur Blue</option>
+                <option value="Madras Red">Madras Red</option>
+                <option value="Medallion Bronze">Medallion Bronze</option>
+                <option value="Commando Sand">Commando Sand</option>
+                <option value="Gun Grey">Gun Grey</option>
+                <option value="Stealth Black">Stealth Black</option>
+                <option value="Emerald">Emerald</option>
+            </select>
+
+            <button type="submit" href="bullet.html">Confirm Booking</button>
+        </form>
+    </div>
+    <footer>
+        <p>© 2024 Man & Metal. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
